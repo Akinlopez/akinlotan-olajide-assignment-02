@@ -16,11 +16,18 @@ const assignment = {};
  */
 function sumOfNumbersTo(destination) {
     let sum = 0;
-    return sum
+    for(let i = 1; i <= destination; i++) {
+        
+        sum += 1;
+    }
+    return sum;
 }
+const destination = 10;
+const result = sumOfNumbersTo(destination);
+
+console.log('The sum of numbers between 1 and ${destination} is: ${result}');
 
 
-// assignment.sumOfNumbersTo = sumOfNumbersTo;
 
 /**
  * Challenge - 2
@@ -66,13 +73,33 @@ function countEvenNumbersWithin(destination) {
  * @param {Array} arrayOfNumbers the array containing temperatures in Celsius to be converted
  * @returns Array the converted temperatures in Fahrenheit
  */
+
+function celsiusToFahrenheit(celcius) {
+    return(celcius * 9/5) + 32;
+}
+
 function celsiusToFahrenheit(arrayOfNumbers) {
-    let result = [];
+    const fahrenheitArray = arrayOfNumbers.map(celsiusToFahrenheit);
+    let result = [fahrenheitArray];
 
     return result;
 }
+const arrayOfNumbers = [-28, 0, 22, 45, 53, 67 ];
+const temperaturesInFahrenheit = mapArray(arrayOfNumbers, celsiusToFahrenheit);
 
-// assignment.celsiusToFahrenheit = celsiusToFahrenheit;
+console.log('Temperature in Celsius', arrayOfNumbers);
+console.log('Temperature in fahrenheit', temperaturesInFahrenheit);
+// Using Math.trunc() for the temperatures in Fahrenheit
+//const temperaturesInFahrenheit = [ -18.4, 32, 71.6, 113, 127.4, 152.6];
+const truncatedTemperature = temperaturesInFahrenheit.map(Math.trunc);
+
+console.log('Original Temperature', temperaturesInFahrenheit);
+console.log('Truncated Temperature', truncatedTemperature);
+
+
+
+
+
 
 // ========================
 // DO NOT EDIT THIS BLOCK
