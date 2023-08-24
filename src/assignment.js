@@ -74,9 +74,7 @@ function countEvenNumbersWithin(destination) {
  * @returns Array the converted temperatures in Fahrenheit
  */
 
-function celsiusToFahrenheit(celcius) {
-    return(celcius * 9/5) + 32;
-}
+
 
 function celsiusToFahrenheit(arrayOfNumbers) {
     const fahrenheitArray = arrayOfNumbers.map(celsiusToFahrenheit);
