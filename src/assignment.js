@@ -88,7 +88,7 @@ const temperaturesInFahrenheit = mapArray(arrayOfNumbers, celsiusToFahrenheit);
 console.log('Temperature in Celsius', arrayOfNumbers);
 console.log('Temperature in fahrenheit', temperaturesInFahrenheit);
 // Using Math.trunc() for the temperatures in Fahrenheit
-//const temperaturesInFahrenheit = [ -18.4, 32, 71.6, 113, 127.4, 152.6];
+const temperaturesInFahrenheit = [ -18.4, 32, 71.6, 113, 127.4, 152.6];
 const truncatedTemperature = temperaturesInFahrenheit.map(Math.trunc);
 
 console.log('Original Temperature', temperaturesInFahrenheit);
