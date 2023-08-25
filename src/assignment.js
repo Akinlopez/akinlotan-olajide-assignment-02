@@ -24,7 +24,7 @@ function sumOfNumbersTo(destination) {
 
 let destination = 10;
 let result = sumOfNumbersTo(destination);
-console.log(result);  // Output: 55 (1 + 2 + 3 + ... + 10)
+console.log(result);  
 
 
 
