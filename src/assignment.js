@@ -16,16 +16,15 @@ const assignment = {};
  */
 function sumOfNumbersTo(destination) {
     let sum = 0;
-    for(let i = 1; i <= destination; i++) {
-        
-        sum += 1;
+    for (let i = 1; i <= destination; i++) {
+        sum += i;
     }
     return sum;
 }
-const destination = 10;
-const result = sumOfNumbersTo(destination);
 
-console.log('The sum of numbers between 1 and ${destination} is: ${result}');
+let destination = 10;
+let result = sumOfNumbersTo(destination);
+console.log(result);  // Output: 55 (1 + 2 + 3 + ... + 10)
 
 
 
@@ -77,11 +76,16 @@ function countEvenNumbersWithin(destination) {
 
 
 function celsiusToFahrenheit(arrayOfNumbers) {
-    const fahrenheitArray = arrayOfNumbers.map(celsiusToFahrenheit);
-    let result = [fahrenheitArray];
+    let celsiusTemps = arrayOfNumbers;
+    let fahrenheitTemps =[];
+    for(let celsius of celsiusTemps){
+        let fahrenheit = (celsius * 9/5) + 32;
+        fahrenheitTemps.push(Math.trunc(fahrenheit));
+    }
 
-    return result;
+    return fahrenheitTemps;
 }
+<<<<<<< HEAD
 const arrayOfNumbers = [-28, 0, 22, 45, 53, 67 ];
 const temperaturesInFahrenheit = mapArray(arrayOfNumbers, celsiusToFahrenheit);
 
@@ -94,7 +98,12 @@ const truncatedTemperature = temperaturesInFahrenheit.map(Math.trunc);
 console.log('Original Temperature', temperaturesInFahrenheit);
 console.log('Truncated Temperature', truncatedTemperature);
 
+=======
+const celsiusTemps = [-28, 0, 22, 45, 53, 67 ];
+const fahrenheitTemps = celsiusToFahrenheit(celsiusTemps);
+>>>>>>> e9efb15 (lastAttempt)
 
+console.log(fahrenheitTemps);
 
 
 
